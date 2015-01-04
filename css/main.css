@@ -36,8 +36,6 @@ body {
 #title{
   font-size: 1.5em;
   font-family: Znikomit, sans-serif;
-  color: #608d4a;
-  height: 10%;
   position: fixed;
   top: 0;
   left: 0;
@@ -51,16 +49,18 @@ body {
 }
 
 #title h1{
+  height: 150px;
   font-weight: normal;
   text-shadow: 2px 2px 5px rgb(22, 98, 29);
   background-color: #d7e2d2;
+  color: #608d4a;
   margin: 0;
   padding: 20px;
 }
 
 #header{
   position: fixed;
-  top: 15%;
+  top: 150px;
   width: 20vw;
   display: inline-block;
   vertical-align: top;
