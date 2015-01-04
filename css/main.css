@@ -120,8 +120,10 @@ body {
   /* background image */
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
+  /*top: 0;
+  left: 0;*/
+  bottom: 0;
+  right: 0;
   overflow:hidden;
   height: 100%;
   width: 100%;
@@ -138,23 +140,11 @@ body {
   -moz-transition: height 0.3s, -moz-transform 0.5s, opacity 0.5s;
   transition: height 0.3s, transform 0.5s, opacity 0.5s;
 }
-.projects-container li:first-of-type {
-  top: 25%;
-  left: 25%;
-}
 .projects-container li:first-of-type::after {
   background-image: url("../img/projet_reims_vert.jpg");
 }
-.projects-container li:nth-of-type(2) {
-  top: 25%;
-  left: 50%;
-}
 .projects-container li:nth-of-type(2)::after {
   background-image: url("../img/projet_vn_vert.jpg");
-}
-.projects-container li:nth-of-type(3) {
-  top: 25%;
-  right: 0%;
 }
 .projects-container li:nth-of-type(3)::after {
   background-image: url("../img/projet_reims_vert.jpg");
@@ -174,11 +164,16 @@ body {
 }
 
 .projects-container li.is-masked {
-  /*left: 0vw;*/
-  width: 25%;
-  -webkit-transition: width 1.4s 0s;
-  -moz-transition: width 1.4s 0s;
-  transition: width 1.4s 0s;
+  width: 0vw;
+  height: 0vh;
+  -webkit-transition: width 0.7s 0s, height 0.7s 0s;
+  -moz-transition: width 0.7s 0s, height 0.7s 0s;
+  transition: width 0.7s 0s, height 0.7s 0s;
+}
+
+.projects-container li.is-masked div
+{
+  display: none;
 }
 
 .projects-container li.is-full-width {
