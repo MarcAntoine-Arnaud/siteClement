@@ -29,7 +29,8 @@ jQuery(document).ready(function($){
     if(bool) {
       //expand project
       container.addClass('project-is-open');
-      project.addClass('is-full-width').siblings('li').removeClass('is-loaded');
+      // project.addClass('is-full-width').siblings('li').removeClass('is-loaded');
+      project.addClass('is-full-width').siblings('li').addClass('is-masked');
     } else {
       //check media query
       var mq = window.getComputedStyle(document.querySelector('.projects-container'), '::before').getPropertyValue('content'),
@@ -38,7 +39,8 @@ jQuery(document).ready(function($){
       container.removeClass('project-is-open');
       //fade out project
       project.animate({opacity: 0}, 800, function(){
-        project.removeClass('is-loaded');
+        // project.removeClass('is-loaded');
+        project.addClass('is-masked');
         $('.projects-container').find('.cd-scroll').attr('style', '');
         setTimeout(function(){
           project.attr('style', '').removeClass('is-full-width').find('.cd-title').attr('style', '');
