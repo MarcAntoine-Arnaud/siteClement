@@ -10,6 +10,11 @@ jQuery(document).ready(function($){
     if(toggle) toggleProject($(this), $('.projects-container'), toggle);
   });
 
+  //close project
+  $('.projects-container .cd-close').on('click', function(){
+    toggleProject($('.is-full-width'), $('.projects-container'), false);
+  });
+
   function toggleProject(project, container, bool) {
     if(bool) {
       //expand project
