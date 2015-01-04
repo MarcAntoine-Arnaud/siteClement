@@ -1,0 +1,236 @@
+@font-face {
+  font-family: 'IM Fell Great Primer';
+  font-style: normal;
+  src: local('IM FELL Great Primer Roman'), local('IM_FELL_Great_Primer_Roman'), url(http://themes.googleusercontent.com/static/fonts/imfellgreatprimer/v4/AL8ALGNthei20f9Cu3e93idd7_gwp8h5wh09JM2vKqs.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Znikomit';
+  font-style: normal;
+  src: local('Znikomit'), local('ZnikomitNo25'), url(ZnikomitNo25.woff) format('woff');
+}
+
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.projects-container::before {
+  /* never visible - this is used in jQuery to check the current MQ */
+  content: 'desktop';
+  display: none;
+}
+
+body {
+  width: 99%;
+  background: #d7e2d2 url(../img/fond_arbre.gif) no-repeat left bottom;
+  background-size: contain;
+  background-attachment:fixed;
+}
+
+#title{
+  font-size: 1.5em;
+  font-family: Znikomit, sans-serif;
+  color: #608d4a;
+}
+
+#title a{
+  text-decoration: none;
+  color: #608d4a;
+}
+
+#title h1{
+  font-weight: normal;
+  text-shadow: 2px 2px 5px rgb(22, 98, 29);
+}
+
+#header{
+  width: 20vw;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#menu{
+  padding: 0px;
+  font-family: Znikomit, sans-serif;
+}
+
+#menu li{
+  list-style-type: none;
+  margin: 5px;
+}
+
+#menu li a{
+  color:#608d4a;
+  color: #072C04;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #d7e2d2;
+  margin: 3px;
+  border-radius: 4px;
+}
+
+#menu .current{
+  color: #606d4a;
+}
+
+.tj_container{
+  width: 400px;
+  display: inline-block;
+}
+
+.tj_container img{
+  width:150px;
+  height:150px;
+  display: block;
+  overflow: hidden;
+}
+
+.tj_container li{
+  list-style-type: none;
+  display: list-item;
+}
+
+.tj_wrapper {
+  width: 100%;
+  height: 100%;
+  /*overflow: hidden;*/
+  position: relative;
+  margin: 0px auto;
+}
+
+#tj_prev{
+  float: left;
+  cursor: pointer;
+}
+
+#tj_next{
+  float: right;
+  cursor: pointer;
+}
+.projects-container {
+  position: absolute;
+  right: 0px;
+  width: 80vw;
+  display: inline-block;
+}
+
+.projects-container li {
+  cursor: pointer;
+  width: 33%;
+  height: 75vh;
+  display: none;
+  opacity:0;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: width 0s;
+  -moz-transition: width 0s;
+  transition: width 0s;
+}
+.projects-container li.is-loaded {
+  display: inline-block;
+  opacity: 1;
+}
+.projects-container li::after {
+  /* background image */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow:hidden;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  -webkit-transition: opacity 0.5s, height 0.4s;
+  -moz-transition: opacity 0.5s, height 0.4s;
+  transition: opacity 0.5s, height 0.4s;
+}
+.projects-container li:first-of-type {
+  top: 25%;
+  left: 25%;
+}
+.projects-container li:first-of-type::after {
+  background-image: url("../img/projet_agence.jpg");
+}
+.projects-container li:nth-of-type(2) {
+  top: 25%;
+  left: 50%;
+}
+.projects-container li:nth-of-type(2)::after {
+  background-image: url("../img/projet_vn_pers.jpg");
+}
+.projects-container li:nth-of-type(3) {
+  top: 25%;
+  left: 75%;
+}
+.projects-container li:nth-of-type(3)::after {
+  background-image: url("../img/projet_reims_pers2.jpg");
+}
+
+.projects-container li::after {
+  background-attachment: fixed;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform 0.8s, opacity 0.5s;
+  -moz-transition: -moz-transform 0.8s, opacity 0.5s;
+  transition: transform 0.8s, opacity 0.5s;
+}
+.projects-container li.is-loaded::after {
+  opacity: 1.0;
+}
+
+.projects-container li:hover::after, .projects-container li.is-full-width.is-loaded::after {
+  opacity: 1.0;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.projects-container li.is-full-width {
+  left: 0vw;
+  width: 100%;
+  -webkit-transition: width 0.4s 0s, z-index 0s 0s, left 0.4s 0s;
+  -moz-transition: width 0.4s 0s, z-index 0s 0s, left 0.4s 0s;
+  transition: width 0.4s 0s, z-index 0s 0s, left 0.4s 0s;
+}
+
+.projects-container li.is-full-width::after {
+  width: 100%;
+}
+
+
+.cd-title {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+}
+
+.cd-title h2 {
+  font-size: 3.6rem;
+}
+
+.cd-title p {
+  font-size: 1.4rem;
+  font-family: "Merriweather", serif;
+  font-style: italic;
+  line-height: 1.2;
+  padding: .4em 2em;
+  display: block;
+  opacity: .6;
+}
+
+.cd-project-info{
+  display: none;
+}
