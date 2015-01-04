@@ -332,3 +332,9 @@ body {
   -o-transform: translateX(-50%) scale(1.2);
   transform: translateX(-50%) scale(1.2);
 }
+
+.profil-container{
+  background-color: #d7e2d2;
+  padding:15px;
+  text-align: justify;
+}
