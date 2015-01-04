@@ -15,6 +15,16 @@ jQuery(document).ready(function($){
     toggleProject($('.is-full-width'), $('.projects-container'), false);
   });
 
+  //scroll to project info
+  $('.projects-container .cd-scroll').on('click', function(){
+    $('body,html').animate({'scrollTop':$(window).height()}, 500); 
+  });
+
+  //update title and .cd-scroll opacity while scrolling
+  $(window).on('scroll', function(){
+    window.requestAnimationFrame(changeOpacity);
+  });
+
   function toggleProject(project, container, bool) {
     if(bool) {
       //expand project

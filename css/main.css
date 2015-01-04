@@ -37,6 +37,12 @@ body {
   font-size: 1.5em;
   font-family: Znikomit, sans-serif;
   color: #608d4a;
+  height: 10%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
 }
 
 #title a{
@@ -47,9 +53,14 @@ body {
 #title h1{
   font-weight: normal;
   text-shadow: 2px 2px 5px rgb(22, 98, 29);
+  background-color: #d7e2d2;
+  margin: 0;
+  padding: 20px;
 }
 
 #header{
+  position: fixed;
+  top: 15%;
   width: 20vw;
   display: inline-block;
   vertical-align: top;
@@ -79,42 +90,9 @@ body {
   color: #606d4a;
 }
 
-.tj_container{
-  width: 400px;
-  display: inline-block;
-}
-
-.tj_container img{
-  width:150px;
-  height:150px;
-  display: block;
-  overflow: hidden;
-}
-
-.tj_container li{
-  list-style-type: none;
-  display: list-item;
-}
-
-.tj_wrapper {
-  width: 100%;
-  height: 100%;
-  /*overflow: hidden;*/
-  position: relative;
-  margin: 0px auto;
-}
-
-#tj_prev{
-  float: left;
-  cursor: pointer;
-}
-
-#tj_next{
-  float: right;
-  cursor: pointer;
-}
 .projects-container {
   position: absolute;
+  top: 15%;
   right: 0px;
   width: 80vw;
   display: inline-block;
@@ -152,11 +130,11 @@ body {
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
   -webkit-transition: height 0.3s, -webkit-transform 0.5s, opacity 0.5s;
   -moz-transition: height 0.3s, -moz-transform 0.5s, opacity 0.5s;
   transition: height 0.3s, transform 0.5s, opacity 0.5s;
@@ -189,11 +167,11 @@ body {
 
 .projects-container li:hover::after, .projects-container li.is-full-width.is-loaded::after {
   opacity: 1.0;
-  -webkit-transform: scale(0.9);
-  -moz-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  -o-transform: scale(0.9);
-  transform: scale(0.9);
+  -webkit-transform: scale(1.0);
+  -moz-transform: scale(1.0);
+  -ms-transform: scale(1.0);
+  -o-transform: scale(1.0);
+  transform: scale(1.0);
 }
 
 .projects-container li.is-full-width {
@@ -233,7 +211,31 @@ body {
 }
 
 .cd-project-info{
+  clear: both;
+  visibility: hidden;
   display: none;
+  opacity: 0;
+  margin-top: 75vh;
+  padding: 4em 0;
+  cursor: auto;
+  background-color: #d7e2d2;
+  color: #224D1D;
+  -webkit-transition: opacity 0.4s 0s, visibility 0s 0.4s;
+  -moz-transition: opacity 0.4s 0s, visibility 0s 0.4s;
+  transition: opacity 0.4s 0s, visibility 0s 0.4s;
+}
+
+.is-full-width .cd-project-info {
+  visibility: visible;
+  display: block;
+  opacity: 1;
+}
+
+.cd-project-info p {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 2;
 }
 
 .projects-container .cd-close,
@@ -271,7 +273,7 @@ body {
 
 .projects-container .cd-scroll {
   position: absolute;
-  bottom: 30px;
+  top: 70vh;
   left: 50%;
   -webkit-transform: translateX(-50%) scale(0);
   -moz-transform: translateX(-50%) scale(0);
