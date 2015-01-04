@@ -16,6 +16,10 @@
   box-sizing: border-box;
 }
 
+a:-webkit-any-link {
+  text-decoration: none;
+}
+
 .projects-container::before {
   /* never visible - this is used in jQuery to check the current MQ */
   content: 'desktop';
