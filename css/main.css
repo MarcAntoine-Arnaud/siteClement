@@ -166,21 +166,21 @@ body {
   left: 25%;
 }
 .projects-container li:first-of-type::after {
-  background-image: url("../img/projet_agence.jpg");
+  background-image: url("../img/projet_reims_vert.jpg");
 }
 .projects-container li:nth-of-type(2) {
   top: 25%;
   left: 50%;
 }
 .projects-container li:nth-of-type(2)::after {
-  background-image: url("../img/projet_vn_pers.jpg");
+  background-image: url("../img/projet_vn_vert.jpg");
 }
 .projects-container li:nth-of-type(3) {
   top: 25%;
   right: 0%;
 }
 .projects-container li:nth-of-type(3)::after {
-  background-image: url("../img/projet_reims_pers2.jpg");
+  background-image: url("../img/projet_reims_vert.jpg");
 }
 
 .projects-container li.is-loaded::after {
