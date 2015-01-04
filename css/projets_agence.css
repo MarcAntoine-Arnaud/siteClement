@@ -1,0 +1,17 @@
+
+.projects-container li {
+  width:23%;
+}
+
+.projects-container li:first-of-type::after {
+  background-image: url("../img/projet_reims_vert.jpg");
+}
+.projects-container li:nth-of-type(2)::after {
+  background-image: url("../img/projet_vn_vert.jpg");
+}
+.projects-container li:nth-of-type(3)::after {
+  background-image: url("../img/projet_reims_vert.jpg");
+}
+.projects-container li:nth-of-type(4)::after {
+  background-image: url("../img/projet_vn_vert.jpg");
+}
