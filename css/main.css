@@ -99,7 +99,7 @@ body {
 
 .projects-container li {
   cursor: pointer;
-  width: 33%;
+  width: 32%;
   height: 75vh;
   display: none;
   opacity:0;
