@@ -2,6 +2,11 @@
 .projects-container li {
   width:23%;
 }
+@media only screen and (max-width: 1170px) {
+  .projects-container li {
+    width: 100%;
+  }
+}
 
 .projects-container li:first-of-type::after {
   background-image: url("../img/projet_reims_vert.jpg");
