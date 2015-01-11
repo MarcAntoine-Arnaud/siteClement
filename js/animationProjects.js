@@ -6,8 +6,9 @@ jQuery(document).ready(function($){
     // console.log("click", $(this));
     var selectedProject = $(this),
       toggle = !selectedProject.hasClass('is-full-width');
-    console.log(toggle);
     if(toggle) toggleProject($(this), $('.projects-container'), toggle);
+
+    document.location.hash = $(this).attr("id");
   });
 
   //close project
@@ -64,5 +65,13 @@ jQuery(document).ready(function($){
       }, 150);
     }
   }
+
+  var urlArray = $(location).attr('href').split("#");
+  if( urlArray.length > 1 ){
+    var selectedProject = $("#"+urlArray[1]),
+      toggle = !selectedProject.hasClass('is-full-width');
+    if(toggle) toggleProject($("#"+urlArray[1]), $('.projects-container'), toggle);
+  }
+  
 
 });

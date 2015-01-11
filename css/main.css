@@ -33,14 +33,26 @@ body {
   background-attachment:fixed;
 }
 
+@media only screen and (max-width: 1170px) {
+  body {
+    width: 95%;
+  }
+}
+
 #title{
   font-size: 1.5em;
   font-family: Znikomit, sans-serif;
-  position: fixed;
+  text-decoration: none;
   top: 0;
   left: 0;
   z-index: 100;
-  width: 100vw;
+}
+
+@media only screen and (min-width: 1170px) {
+  #title{
+    position: fixed;
+    width: 100vw;
+  }
 }
 
 #title a{
@@ -58,11 +70,20 @@ body {
 }
 
 #header{
-  position: fixed;
+  /*position: fixed;*/
   top: 150px;
-  width: 20vw;
-  display: inline-block;
-  vertical-align: top;
+  padding-left: 15px;
+}
+
+@media only screen and (min-width: 1170px) {
+  #header{
+    position: fixed;
+    top: 150px;
+    width: 20vw;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 0px;
+  }
 }
 
 #menu{
@@ -90,11 +111,24 @@ body {
 }
 
 .projects-container {
-  position: absolute;
-  top: 15%;
-  right: 0px;
-  width: 80vw;
-  display: inline-block;
+
+}
+
+@media only screen and (min-width: 1170px) {
+  .projects-container {
+    position: absolute;
+    top: 15%;
+    right: 0px;
+    width: 80vw;
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 1170px) {
+  .projects-container ul {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .projects-container li {
